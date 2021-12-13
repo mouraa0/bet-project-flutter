@@ -16,7 +16,6 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         primaryIconTheme: const IconThemeData(color: Colors.black),
-        primarySwatch: Colors.blue,
       ),
       routes: {
         Routes.homepage: (context) => const HomePage(),

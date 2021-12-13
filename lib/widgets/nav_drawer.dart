@@ -21,7 +21,10 @@ class _NavDrawerState extends State<NavDrawer> {
                   backgroundImage: AssetImage('assets/images/userpic.png'),
                   radius: 50,
                 ),
-                Text('Moura')
+                Padding(
+                  padding: EdgeInsets.only(top: 5),
+                  child: Text('Moura'),
+                )
               ],
             ),
           ),
@@ -32,11 +35,11 @@ class _NavDrawerState extends State<NavDrawer> {
           ),
           ListTile(
             leading: const Icon(Icons.history, color: Colors.black,),
-            title: const Text('Bets Historic'),
+            title: const Text('Bets History'),
             onTap: () => {},
           ),
           ListTile(
-            leading: Icon(Icons.exit_to_app, color: Colors.black),
+            leading: const Icon(Icons.exit_to_app, color: Colors.black),
             title: const Text('Logout'),
             onTap: () => {},
           ),

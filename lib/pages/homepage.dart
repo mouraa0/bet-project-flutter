@@ -16,18 +16,38 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: const NavDrawer(),
+      backgroundColor: const Color.fromRGBO(167, 171, 175, 1),
       appBar: AppBar(
         backgroundColor: Colors.transparent,
+        centerTitle: true,
         elevation: 0,
         iconTheme: const IconThemeData(color: Colors.black),
-        title: const Text('1250', style: TextStyle(color: Colors.black),),
+        title: RichText(
+          text: const TextSpan(
+            children: [
+              WidgetSpan(
+                child: Icon(Icons.attach_money, size: 30)
+              ),
+              TextSpan(
+                text: '1250',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 30,
+                )
+              )
+            ]
+          ),
+        ),
       ),
       body: Container(
-          padding: const EdgeInsets.all(10),
-          child: Column(
-            children: const [
-              BetCard(),
-            ],
+          margin: const EdgeInsets.all(10),
+          child: Container(
+            alignment: Alignment.center,
+            child: Column(
+              children: const [
+                BetCard(),
+              ],
+            ),
           )),
     );
   }
